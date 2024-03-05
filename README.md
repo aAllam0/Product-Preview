@@ -4,8 +4,8 @@
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/product-preview-MjC7K9wIjd)
+- Live Site URL: (https://github.com/aAllam0/Product-Preview)
 
 ### Useful resources
 
