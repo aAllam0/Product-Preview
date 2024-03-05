@@ -1,0 +1,152 @@
+:root {
+  --dark-cyan-color: hsl(158, 36%, 37%);
+  --cream-color: hsl(30, 38%, 92%);
+  --dark-blue-color: hsl(212, 21%, 14%);
+  --dark-grayish-blue-color: hsl(228, 12%, 48%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+}
+.fraunces-uniquifier {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  /* font-weight: ; */
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--cream-color);
+}
+.product-card {
+  width: 425px;
+  height: fit-content;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-card .image {
+  flex-basis: 50%;
+}
+.product-card .image img {
+  max-width: 100%;
+  height: 100%;
+}
+.product-card .image .mobile {
+  display: none;
+}
+.product-card .preview {
+  flex-basis: 50%;
+  padding: 20px;
+}
+.product-card .preview .perfume {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue-color);
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+.product-card .preview h1 {
+    font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  font-size: 22px;
+  line-height: 1;
+}
+.product-card .preview p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--dark-grayish-blue-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.product-card .preview .price {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: var(--dark-cyan-color);
+  font-weight: bold;
+  position: relative;
+}
+.product-card .preview .price::after {
+  content: "$169.99";
+  position: absolute;
+  right: -55px;
+  font-size: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue-color);
+  font-weight: normal;
+}
+.product-card .preview a {
+  display: block;
+  margin-top: 15px;
+  background-color: var(--dark-cyan-color);
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.product-card .preview a img {
+  margin-right: 5px;
+  width: 12px;
+}
+.product-card .preview a span {
+  font-size: 13px;
+}
+.product-card .preview a:hover {
+  background-color: hsl(158deg 28.95% 29.52%);
+}
+@media (max-width: 767px) {
+  .product-card {
+    flex-direction: column;
+    width: calc(100% - 50px);
+  }
+  .product-card .image .mobile {
+    display: block;
+  }
+  .product-card .image .desktop {
+    display: none;
+  }
+  .product-card .preview p {
+    font-size: 16px;
+  }
+  .product-card .preview .price {
+    font-size: 35px;
+  }
+  .product-card .preview .price::after {
+    font-size: 15px;
+    right: -75px;
+  }
+}
